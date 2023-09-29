@@ -1,10 +1,10 @@
-/* Reset some default browser styles */
+
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
 }
 
-/* Basic styling for the entire page */
+
 body {
   font-family: Helvetica, sans-serif;
   background-color: #efefef;
@@ -12,50 +12,50 @@ body {
   color: #333;
 }
 
-/* Page title */
+
 h1 {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
-/* Author and date */
+
 p {
   font-style: italic;
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-/* Section headings */
+
 h2 {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-/* Emphasized text */
+
 b {
   font-weight: bold;
 }
 
-/* Links */
+
 a {
   text-decoration: none;
   color: #0074d9;
 }
 
-/* Unordered list */
+
 ul {
   list-style: none;
 }
 
-/* Code block */
+
 code {
   font-family: Monaco, monospace;
   background-color: #f0f0f0;
   padding: 2px 4px;
 }
 
-/* Example code snippet */
+
 pre {
   background-color: #f0f0f0;
   padding: 10px;
@@ -64,7 +64,7 @@ pre {
   overflow-x: auto;
 }
 
-/* Navigation style */
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -81,12 +81,12 @@ nav a {
   text-decoration: none;
 }
 
-/* Box with border-radius mixin */
+
 .box {
   @include border-radius(10px);
 }
 
-/* Extend/Inheritance */
+
 .extended-style {
   @extend .box;
   background-color: #ff5722;
