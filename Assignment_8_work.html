@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+         $(document).ready(function(){
+            $("button").click(function(){
+                $("div").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                }, 1000, function(){
+                    
+                    $(this).css("background-color", "#ff5733");
+                    $(this).css("border-radius", "50%"); 
+                    $("button").text("Animation Completed!"); 
+                    $(this).animate({top: '0px'}, 500, 'easeOutBounce');
+                    // click event to change the color 
+                    $(this).click(function(){
+                        $(this).css("background-color", "#42a5f5"); 
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-primary">Start Animation</button>
+        <div class="bg-success rounded-circle" style="height:100px;width:100px;position:absolute;"></div>
+    </div>
+</body>
+</html>
+
