@@ -11,13 +11,15 @@
                     height: '150px',
                     width: '150px'
                 }, 1000, function(){
-                    // Animation complete. Add more effects here.
-                    $(this).css("background-color", "#ff5733"); // Change background color
-                    $(this).css("border-radius", "50%"); // Change border radius
-                    $("button").text("Animation Completed!"); // Change button text
-
-                    // Add a bounce effect
+                    
+                    $(this).css("background-color", "#ff5733");
+                    $(this).css("border-radius", "50%"); 
+                    $("button").text("Animation Completed!"); 
                     $(this).animate({top: '0px'}, 500, 'easeOutBounce');
+                    // click event to change the color 
+                    $(this).click(function(){
+                        $(this).css("background-color", "#42a5f5"); 
+                    });
                 });
             });
         });
