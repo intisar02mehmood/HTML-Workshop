@@ -1,25 +1,38 @@
-let num = 0;
+// Define your projects using JSON data
+const projects = [
+    {
+        title: "Project 1",
+        description: "Description of Project 1",
+        link: "https://example.com/project1",
+    },
+    {
+        title: "Project 2",
+        description: "Description of Project 2",
+        link: "https://example.com/project2",
+    },
+    // Add more projects as needed
+];
 
-const value = document.querySelector(".value");
-const btns = document.querySelectorAll(".btn");
+// AngularJS application
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function ($scope) {
+    $scope.projects = projects;
+});
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const styles = e.currentTarget.classList;
-    if (styles.contains("decrease")) {
-      num--;
-    } else if (styles.contains("increase")) {
-      num++;
-    } else {
-      num = 0;
-    }
-    value.textContent = num;
-    if (num > 0) {
-      value.style.color = "green";
-    } else if (num < 0) {
-      value.style.color = "red";
-    } else {
-      value.style.color = "black";
-    }
-  });
+// jQuery for dynamically populating the projects section
+$(document).ready(function () {
+    const projectList = $("#project-list");
+    projects.forEach((project) => {
+        projectList.append(`
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${project.title}</h5>
+                        <p class="card-text">${project.description}</p>
+                        <a href="${project.link}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
 });
