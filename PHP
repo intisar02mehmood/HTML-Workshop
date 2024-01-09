@@ -1,0 +1,23 @@
+/TASK-----1
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+
+<footer>
+    <p>
+        <?php
+        function displayCopyright() {
+            $currentDateTime = date("Y-m-d H:i:s");
+            echo "&copy; " . date("Y") . " YourWebsiteName | All rights reserved | Last updated on " . $currentDateTime;
+        }
+
+        displayCopyright();
+        ?>
+    </p>
+</footer>
+
+</body>
+</html>
